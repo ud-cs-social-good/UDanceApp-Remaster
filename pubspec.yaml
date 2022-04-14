@@ -30,6 +30,13 @@ dependencies:
   cupertino_icons: ^1.0.0
   cloud_firestore: ^3.1.12
   firebase_core: ^1.14.1
+  google_fonts:
+  url_launcher:
+  auto_size_text: ^3.0.0
+  flutter_markdown: ^0.6.9+1
+  video_player: ^2.3.0
+  visibility_detector: ^0.2.2
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

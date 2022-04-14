@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/side_menu.dart';
-import '../constants.dart';
-import '../models/sample_announcements.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/announcement_model.dart';
 import '../pages/announcement_page.dart';
@@ -13,17 +11,6 @@ class AnnouncementsPage extends StatefulWidget {
 }
 
 class _AnnouncementsPageState extends State<AnnouncementsPage> {
-  List<SampleAnnouncements> announces = [
-    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
-    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
-    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
-    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
-    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in the Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
-    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
-    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
-    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in the Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
-    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +20,14 @@ class _AnnouncementsPageState extends State<AnnouncementsPage> {
         toolbarHeight: 100.0,
         title: Text(
           'Announcements',
-          style: Theme.of(context).textTheme.headline5.copyWith(
-              color: Theme.of(context).accentColor,
+          style: Theme.of(context).textTheme.headline5!.copyWith(
+              color: Theme.of(context).colorScheme.secondary,
               fontWeight: FontWeight.w500),
         ),
       ),
       body: StreamBuilder(
         stream:FirebaseFirestore.instance.collection('announcements').snapshots(),
-        builder: (context, snapshot) {
+        builder: (context, AsyncSnapshot snapshot) {
           if (!snapshot.hasData) return const Text("Loading...");
           return ListView.builder(
               physics: ClampingScrollPhysics(),
@@ -85,8 +72,8 @@ class _AnnouncementsPageState extends State<AnnouncementsPage> {
 
 class CircleImage extends StatelessWidget {
   CircleImage({
-    Key key,
-    this.imagePath,
+    Key? key,
+    this.imagePath = "",
   }) : super(key: key);
 
   final String imagePath;

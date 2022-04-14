@@ -1,7 +1,7 @@
 /// A model for a clickable list tile.
 class RowButtonModel {
   RowButtonModel(
-      {this.text = "", this.url, this.shouldCopy = false, this.eventTitle});
+      {this.text = "", this.url= "", this.shouldCopy = false, this.eventTitle = ""});
 
   /// The button text to display.
   ///

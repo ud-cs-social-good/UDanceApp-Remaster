@@ -104,7 +104,7 @@ class _HomePage1State extends State<HomePage1> {
                       .orderBy('dateStart', descending: false)
                       .limit(2)
                       .snapshots(),
-                  builder: (context, snapshot) {
+                  builder: (context, AsyncSnapshot snapshot) {
                     if (!snapshot.hasData) return Text("Loading");
                     return ListView.builder(
                       physics: NeverScrollableScrollPhysics(),

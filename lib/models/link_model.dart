@@ -1,15 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LinkModel {
-  LinkModel({this.title = "", this.description = "", this.url, this.photo = ""});
+  LinkModel({this.title = "", this.description = "", this.url = "", this.photo = ""});
 
   String title;
   String description;
   String url;
   String photo;
 
-  factory LinkModel.fromDocument(DocumentSnapshot doc) {
-    var document = doc.data();
+  factory LinkModel.fromDocument(DocumentSnapshot<Map<String, dynamic>> doc) {
+    var document = doc.data()!;
 
     return LinkModel(
       title: document['title'] ?? "",

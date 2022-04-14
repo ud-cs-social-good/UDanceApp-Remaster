@@ -104,15 +104,12 @@ class GetImage extends StatelessWidget {
   @override
   @override
   Widget build(BuildContext context) {
-    Widget image =
-    Image.network(imagePath,
+    return Image.network(imagePath,
       fit: BoxFit.cover,
       errorBuilder:
-          (BuildContext context, Object exception, StackTrace stackTrace) {
+          (BuildContext context, Object exception, StackTrace? stackTrace) {
         return Image.asset(Constants.imgDefaultEvent);
       },
     );
-
-    return image;
   }
 }

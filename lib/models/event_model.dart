@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'list_item_model.dart';
 
+
 class EventModel extends ListItemModel {
   EventModel({
     this.title = "",
@@ -9,18 +10,18 @@ class EventModel extends ListItemModel {
 
     /// An alternative way to specify the [dateStart]
     /// in the format 'MM/dd/yy/h:mm a'.
-    String dateStartString,
+    String dateStartString = "",
 
     /// An alternative way to specify the [dateEnd]
     /// in the format 'MM/dd/yy/h:mm a'.
-    String dateEndString,
-    this.imagePath,
+    String dateEndString = "",
+    this.imagePath = "",
     this.dateStart,
     this.dateEnd,
-    this.address,
-    this.addressLink,
-    this.googleCalendarLink,
-    this.icsLink,
+    this.address = "",
+    this.addressLink = "",
+    this.googleCalendarLink = "",
+    this.icsLink = "",
   }) {
     if (dateStart == null && dateStartString != null)
       this.dateStart = DateFormat('MM/dd/yy/h:mm a').parse(dateStartString);
@@ -29,12 +30,12 @@ class EventModel extends ListItemModel {
     super.title = title;
     super.description = description;
     if (dateStart != null) {
-      super.date = dateStart;
+      super.date = dateStart?? DateTime.now();
     }
   }
 
-  factory EventModel.fromDocument(DocumentSnapshot doc) {
-    var document = doc.data();
+  factory EventModel.fromDocument(DocumentSnapshot<Map<String, dynamic>> doc) {
+    var document = doc.data()!;
     var dateStartMS = document['dateStart']?.microsecondsSinceEpoch;
     var dateEndMS = document['dateEnd']?.microsecondsSinceEpoch;
     var dateStart = dateStartMS != null
@@ -68,10 +69,10 @@ class EventModel extends ListItemModel {
   String description;
 
   /// When the event starts.
-  DateTime dateStart;
+  DateTime? dateStart;
 
   /// When the event ends.
-  DateTime dateEnd;
+  DateTime? dateEnd;
 
   /// The address for the event.
   String address;
@@ -106,17 +107,17 @@ class EventModel extends ListItemModel {
     if (dateStart == null) {
       return dateEnd == null
           ? ""
-          : "to ${DateFormat('MMM').format(dateEnd)} ${dateEnd.day}";
+          : "to ${DateFormat('MMM').format(dateEnd)} ${dateEnd!.day}";
     } else if (dateEnd == null) {
-      return "${DateFormat('MMM').format(dateStart)} ${dateStart.day}";
-    } else if (dateEnd.difference(dateStart).inMinutes <
+      return "${DateFormat('MMM').format(dateStart)} ${dateStart!.day}";
+    } else if (dateEnd!.difference(dateStart!).inMinutes <
         Duration.minutesPerDay) {
       return "${DateFormat('MMM').format(dateStart)}"
-          " ${dateStart.day}";
+          " ${dateStart!.day}";
     } else
       return "${DateFormat('MMM').format(dateStart)}"
-          " ${dateStart.day}"
-          " to ${DateFormat('MMM').format(dateStart)} ${dateEnd.day}";
+          " ${dateStart!.day}"
+          " to ${DateFormat('MMM').format(dateStart)} ${dateEnd!.day}";
   }
 
   /// Returns the the start time and end time of the event,

@@ -5,7 +5,7 @@ class ListItemModel {
 
   String title;
   String description;
-  DateTime date;
+  DateTime? date;
   String address;
   String addressLink;
 

@@ -15,7 +15,7 @@ class EventsPage extends StatelessWidget {
         toolbarHeight: 100.0,
         title: Text(
           "Upcoming Events",
-          style: Theme.of(context).textTheme.headline5.copyWith(
+          style: Theme.of(context).textTheme.headline5!.copyWith(
               color: Theme.of(context).accentColor,
               fontWeight: FontWeight.w500),
         ),
@@ -33,17 +33,17 @@ class EventsPage extends StatelessWidget {
                     .where('dateStart', isLessThan: DateTime.now())
                     .orderBy('dateStart', descending: true)
                     .snapshots(),
-                builder: (context, snapshotPast) {
+                builder: (context, AsyncSnapshot snapshotPast) {
                   if (!snapshotUpcoming.hasData || !snapshotPast.hasData)
                     return const Text("Loading...");
                   return CustomScrollView(
                     slivers: [
                       SliverList(
                         delegate: SliverChildBuilderDelegate((context, index) {
-                          return (snapshotUpcoming.data.docs.length > 0)
-                              ? getEventTile(snapshotUpcoming.data.docs[index])
+                          return ((snapshotUpcoming.data as QuerySnapshot).docs.length > 0)
+                              ? getEventTile((snapshotUpcoming.data as QuerySnapshot).docs[index])
                               : EmptyState();
-                        }, childCount: snapshotUpcoming.data.docs.length),
+                        }, childCount: (snapshotUpcoming.data as QuerySnapshot).docs.length),
                       ),
                       if (snapshotPast.data.docs.length > 0) ...[
                         SliverToBoxAdapter(

@@ -6,16 +6,16 @@ class AnnouncementModel extends ListItemModel {
   AnnouncementModel({
     this.title = "",
     this.description = "",
-    this.imagePath,
-    this.location,
+    this.imagePath = "",
+    this.location = "",
   }){
     super.title = title;
     super.description = description;
   }
 
 
-  factory AnnouncementModel.fromDocument(DocumentSnapshot doc) {
-    var document = doc.data();
+  factory AnnouncementModel.fromDocument(DocumentSnapshot<Map<String, dynamic>> doc) {
+    var document = doc.data()!;
 
     return AnnouncementModel(
       title: document['title'] ?? "",

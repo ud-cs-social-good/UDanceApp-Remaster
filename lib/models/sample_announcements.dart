@@ -5,6 +5,6 @@ class SampleAnnouncements {
   String flag; // links to the picture
   String text; // sample text
 
-  SampleAnnouncements({this.title, this.flag, this.location, this.text});
+  SampleAnnouncements({this.title ="", this.flag= "", this.location="", this.text=""});
 
 }

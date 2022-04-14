@@ -56,7 +56,7 @@ class EventPage extends StatelessWidget {
                       width: titleWidth,
                       child: AutoSizeText(
                         eventModel.title.toUpperCase(),
-                        style: Theme.of(context).textTheme.headline3.copyWith(
+                        style: Theme.of(context).textTheme.headline3!.copyWith(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1.4,
@@ -159,8 +159,8 @@ class EventPage extends StatelessWidget {
 
 class TopImage extends StatelessWidget {
   const TopImage({
-    Key key,
-    this.imagePath,
+    Key? key,
+    this.imagePath = "",
   }) : super(key: key);
 
   final String imagePath;
@@ -171,7 +171,7 @@ class TopImage extends StatelessWidget {
     Image.network(imagePath,
       fit: BoxFit.cover,
       errorBuilder:
-          (BuildContext context, Object exception, StackTrace stackTrace) {
+          (BuildContext context, Object exception, StackTrace? stackTrace) {
         return Image.asset(Constants.imgDefaultEvent);
       },
     );
@@ -196,9 +196,9 @@ class TopImage extends StatelessWidget {
 /// Displays the description of the event with the [flutter_markdown] package.
 class _EventDescription extends StatelessWidget {
   const _EventDescription({
-    Key key,
+    Key? key,
     this.description = "",
-    this.title,
+    this.title = "",
   }) : super(key: key);
 
   final String description;

@@ -16,15 +16,15 @@ class HomePage1 extends StatefulWidget {
 
 class _HomePage1State extends State<HomePage1> {
   final double appBarFraction = 0.25;
-  VideoPlayerController _videoController;
+  VideoPlayerController? _videoController;
 
   @override
   void initState() {
     _videoController = VideoPlayerController.asset("assets/video.mp4")
       ..initialize().then((_) {
-        _videoController.setVolume(0);
-        _videoController.play();
-        _videoController.setLooping(true);
+        _videoController!.setVolume(0);
+        _videoController!.play();
+        _videoController!.setLooping(true);
         // Ensure the first frame is shown after the video is initialized.
         setState(() {});
       });
@@ -38,9 +38,9 @@ class _HomePage1State extends State<HomePage1> {
         key: Key('video key'),
         onVisibilityChanged: (VisibilityInfo info) {
           if (info.visibleFraction < 1) {
-            _videoController.play();
+            _videoController!.play();
           } else {
-            _videoController.pause();
+            _videoController!.pause();
           }
         },
         child: NavDrawer(),
@@ -55,9 +55,9 @@ class _HomePage1State extends State<HomePage1> {
                   child: FittedBox(
                       fit: BoxFit.cover,
                       child: SizedBox(
-                          width: _videoController.value.size?.width ?? 0,
-                          height: _videoController.value.size?.height ?? 0,
-                          child: VideoPlayer(_videoController))),
+                          width: _videoController!.value.size?.width ?? 0,
+                          height: _videoController!.value.size?.height ?? 0,
+                          child: VideoPlayer(_videoController!))),
                 ),
                 ProminentAppBar(),
               ],
@@ -139,7 +139,7 @@ class _HomePage1State extends State<HomePage1> {
       }
     });
     result.sort((a, b) {
-      return b.date.compareTo(a.date);
+      return b.date!.compareTo(a.date!);
     });
     result.addAll(noDateList);
     return result;
@@ -147,7 +147,7 @@ class _HomePage1State extends State<HomePage1> {
 
   @override
   void dispose() {
-    _videoController.dispose();
+    _videoController!.dispose();
     super.dispose();
   }
 }

@@ -11,6 +11,6 @@ class ListItemModel {
 
   /// Returns a three-letter String abbreviation for the month.
   String get monthAbbrev {
-    return date != null ? DateFormat('MMM').format(date) : "";
+    return date != null ? DateFormat('MMM').format(date!) : "";
   }
 }

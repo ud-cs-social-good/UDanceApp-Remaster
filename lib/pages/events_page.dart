@@ -27,7 +27,7 @@ class EventsPage extends StatelessWidget {
               .orderBy('dateStart', descending: false)
               .snapshots(),
           builder: (context, snapshotUpcoming) {
-            return StreamBuilder(
+            return StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection('events')
                     .where('dateStart', isLessThan: DateTime.now())
@@ -41,7 +41,7 @@ class EventsPage extends StatelessWidget {
                       SliverList(
                         delegate: SliverChildBuilderDelegate((context, index) {
                           return ((snapshotUpcoming.data as QuerySnapshot).docs.length > 0)
-                              ? getEventTile((snapshotUpcoming.data as QuerySnapshot).docs[index])
+                              ? getEventTile((snapshotUpcoming.data as DocumentSnapshot<Map<String,dynamic>>))
                               : EmptyState();
                         }, childCount: (snapshotUpcoming.data as QuerySnapshot).docs.length),
                       ),
@@ -73,7 +73,7 @@ class EventsPage extends StatelessWidget {
     );
   }
 
-  Widget getEventTile(DocumentSnapshot doc) {
+  Widget getEventTile(DocumentSnapshot<Map<String,dynamic>> doc) {
     return EventTile(EventModel.fromDocument(doc));
   }
 }

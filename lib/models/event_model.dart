@@ -107,17 +107,17 @@ class EventModel extends ListItemModel {
     if (dateStart == null) {
       return dateEnd == null
           ? ""
-          : "to ${DateFormat('MMM').format(dateEnd)} ${dateEnd!.day}";
+          : "to ${DateFormat('MMM').format(dateEnd!)} ${dateEnd!.day}";
     } else if (dateEnd == null) {
-      return "${DateFormat('MMM').format(dateStart)} ${dateStart!.day}";
+      return "${DateFormat('MMM').format(dateStart!)} ${dateStart!.day}";
     } else if (dateEnd!.difference(dateStart!).inMinutes <
         Duration.minutesPerDay) {
-      return "${DateFormat('MMM').format(dateStart)}"
+      return "${DateFormat('MMM').format(dateStart!)}"
           " ${dateStart!.day}";
     } else
-      return "${DateFormat('MMM').format(dateStart)}"
+      return "${DateFormat('MMM').format(dateStart!)}"
           " ${dateStart!.day}"
-          " to ${DateFormat('MMM').format(dateStart)} ${dateEnd!.day}";
+          " to ${DateFormat('MMM').format(dateStart!)} ${dateEnd!.day}";
   }
 
   /// Returns the the start time and end time of the event,
@@ -126,10 +126,10 @@ class EventModel extends ListItemModel {
   /// If the event is more than 24 hours, returns an empty String.
   String get timeDiff {
     if (dateStart == null) return "";
-    if (dateEnd == null) return DateFormat('h:mm a').format(dateStart);
-    if (dateEnd.difference(dateStart).inMinutes < Duration.minutesPerDay) {
-      return "${DateFormat('h:mm a').format(dateStart)} - "
-          "${DateFormat('h:mm a').format(dateEnd)}";
+    if (dateEnd == null) return DateFormat('h:mm a').format(dateStart!);
+    if (dateEnd!.difference(dateStart!).inMinutes < Duration.minutesPerDay) {
+      return "${DateFormat('h:mm a').format(dateStart!)} - "
+          "${DateFormat('h:mm a').format(dateEnd!)}";
     } else {
       return "";
     }

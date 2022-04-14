@@ -172,7 +172,7 @@ class _EventDescription extends StatelessWidget {
         onTapLink: (text, url, title) {
           Helpers.launchURL(
             context,
-            url,
+            url!,
             text: text,
             title: title,
           );

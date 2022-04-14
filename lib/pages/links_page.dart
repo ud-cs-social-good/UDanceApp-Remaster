@@ -54,7 +54,7 @@ class LinksPage extends StatelessWidget {
 
 
 
-    Widget getLinkTile(DocumentSnapshot doc) {
+    Widget getLinkTile(DocumentSnapshot<Map<String, dynamic>> doc) {
       return LinkTile(LinkModel.fromDocument(doc));
     }
   }

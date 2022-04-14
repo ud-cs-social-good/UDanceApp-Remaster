@@ -12,8 +12,8 @@ class Helpers {
   /// If the [dateStart] and [dateEnd] are a day or more apart, then two dates
   /// are shown. Otherwise, only a single date is shown.
   static List<TextSpan> getDateText(
-      {DateTime dateStart,
-      DateTime dateEnd,
+      {DateTime? dateStart,
+      DateTime? dateEnd,
       double monthFontSize = 14,
       double dayFontSize = 26}) {
     List<TextSpan> list = [];
@@ -57,8 +57,8 @@ class Helpers {
   /// The optional [title] should be the title of the page or section containing
   /// the [url].
   static Future<void> launchURL(BuildContext context, String url,
-      {String text, String title}) async {
-    String errorMessage;
+      {String text ="", String title = ""}) async {
+    String errorMessage = "";
     try {
       await _launchURL(url);
     } on FormatException catch (e) {

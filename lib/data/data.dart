@@ -1,4 +1,4 @@
-import 'package:udance/models/list_item_model.dart';
+import 'package:udance2022/models/list_item_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../constants.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:udance/constants.dart';
+import 'package:udance2022/constants.dart';
 import '../models/models.dart';
 import '../pages/event_page.dart';
 import 'empty_state.dart';
@@ -10,9 +10,9 @@ import 'event_tile.dart';
 /// If [items] is empty, displays an [EmptyState].
 class ListSection extends StatelessWidget {
   const ListSection({
-    Key key,
-    @required this.items,
-    this.maxLines,
+    Key? key,
+    required this.items,
+    this.maxLines = 10,
     this.numItems = 2,
     this.padding = const EdgeInsets.all(0),
   }) : super(key: key);

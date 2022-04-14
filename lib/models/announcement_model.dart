@@ -7,13 +7,10 @@ class AnnouncementModel extends ListItemModel {
     this.title = "",
     this.description = "",
     this.imagePath,
-    this.address,
-    this.addressLink
+    this.location,
   }){
     super.title = title;
     super.description = description;
-    super.address = address;
-    super.addressLink = addressLink;
   }
 
 
@@ -22,8 +19,7 @@ class AnnouncementModel extends ListItemModel {
 
     return AnnouncementModel(
       title: document['title'] ?? "",
-      address: document['location'] ?? "",
-      addressLink: document['addressLink'] ?? "",
+      location: document['location'] ?? "",
       description: document['text'] ?? "",
       imagePath: document['flag'] ?? "",
     );
@@ -42,6 +38,6 @@ class AnnouncementModel extends ListItemModel {
    /// The path to the image.
   String imagePath;
 
-String address;
-String addressLink;
+  //Location of event (if applicable)
+String location;
 }

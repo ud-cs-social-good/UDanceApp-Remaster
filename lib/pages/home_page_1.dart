@@ -79,19 +79,19 @@ class _HomePage1State extends State<HomePage1> {
                 const SizedBox(height: 15),
                 const Divider(thickness: 2, color: Palette.udanceBlue),
                 new InkWell(
-                  child: Center(child: new RichText(
+                    child: Center(child: new RichText(
                       text: TextSpan(
-                          text: 'Donate to UDance Here!',
+                        text: 'Donate to UDance Here!',
                         style: TextStyle(
-                          color: Palette.udanceBlue,
-                          fontSize: 30,
-                          decoration: TextDecoration.underline
+                            color: Palette.udanceBlue,
+                            fontSize: 30,
+                            decoration: TextDecoration.underline
                         ),
                       ),
-                    textAlign: TextAlign.justify,
-                  )
-                  ),
-                  onTap: () => launch('https://www.udancede.org/bpos_index.aspx?eventtag=ud2022')
+                      textAlign: TextAlign.justify,
+                    )
+                    ),
+                    onTap: () => launch('https://www.udancede.org/bpos_index.aspx?eventtag=ud2022')
                 ),
                 const Divider(thickness: 2, color: Palette.udanceBlue),
                 const SizedBox(height: 10),

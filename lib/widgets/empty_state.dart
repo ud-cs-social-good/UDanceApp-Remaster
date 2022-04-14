@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Widget displaying an icon and text representing an empty state.
 class EmptyState extends StatelessWidget {
   const EmptyState({
-    Key key,
+    Key? key,
     this.height = 140,
     this.icon = const Icon(Icons.calendar_today),
     this.text = const Text("Check back later for more!")

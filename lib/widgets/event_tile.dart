@@ -36,7 +36,7 @@ class EventTile extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.center,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 height: leadingSize,
                 width: leadingSize,
                 child: RichText(

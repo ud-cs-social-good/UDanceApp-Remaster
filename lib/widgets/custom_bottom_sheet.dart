@@ -11,11 +11,9 @@ import '../helpers/helpers.dart';
 /// [RowButtonModel] are null, then a [SizedBox.shrink()] is displayed instead
 /// for the [RowButtonModel].
 class CustomBottomSheet extends StatelessWidget {
-  //final EventModel eventModel;
   final ListItemModel listItemModel;
-  final List<RowButtonModel> items;
 
-  //CustomBottomSheet(this.eventModel, this.items);
+  final List<RowButtonModel> items;
 
   CustomBottomSheet(this.listItemModel, this.items);
 
@@ -29,7 +27,7 @@ class CustomBottomSheet extends StatelessWidget {
             return ListTile(
               title: Text(item.text),
               onTap: () async {
-                  Navigator.of(context).pop();
+                Navigator.of(context).pop();
                 if (item.shouldCopy) {
                   Clipboard.setData(ClipboardData(text: listItemModel.address));
                 } else {

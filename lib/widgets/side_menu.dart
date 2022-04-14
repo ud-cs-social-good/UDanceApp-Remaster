@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:udance/pages/events_page.dart';
-import 'package:udance/pages/announcements_page.dart';
-import 'package:udance/pages/about_page_single.dart';
-import 'package:udance/pages/home_page_1.dart';
-import 'package:udance/pages/links_page.dart';
+import 'package:udance2022/pages/events_page.dart';
+import 'package:udance2022/pages/announcements_page.dart';
+import 'package:udance2022/pages/about_page_single.dart';
+import 'package:udance2022/pages/home_page_1.dart';
+import 'package:udance2022/pages/links_page.dart';
 
 class NavDrawer extends StatelessWidget {
   @override

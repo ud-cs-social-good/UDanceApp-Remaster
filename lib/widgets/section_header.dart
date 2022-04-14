@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
-    Key key,
-    @required this.text,
+    Key? key,
+    required this.text,
     this.padding = const EdgeInsets.only(bottom: 8)
   }) : super(key: key);
 
@@ -21,7 +21,7 @@ class SectionHeader extends StatelessWidget {
       padding: padding,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.headline5.copyWith(
+        style: Theme.of(context).textTheme.headline5!.copyWith(
             color: Theme.of(context).accentColor,
             fontWeight: FontWeight.w500),
       ),

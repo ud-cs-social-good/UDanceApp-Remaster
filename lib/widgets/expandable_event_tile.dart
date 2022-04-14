@@ -123,7 +123,7 @@ class ExpandableEventTile extends StatelessWidget {
           top: 4,
           left: 4,
           child: Container(
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             alignment: Alignment.center,
             width: leadingOverlaySize,
             height: leadingOverlaySize,
@@ -132,7 +132,7 @@ class ExpandableEventTile extends StatelessWidget {
               text: TextSpan(
                   style: Theme.of(context)
                       .textTheme
-                      .headline6
+                      .headline6!
                       .copyWith(color: Colors.white),
                   children: Helpers.getDateText(
                     dateStart: eventModel.dateStart,

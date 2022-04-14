@@ -8,8 +8,6 @@ import '../models/link_model.dart';
 import '../pages/event_page.dart';
 import '../constants.dart';
 
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-
 import 'package:url_launcher/url_launcher.dart';
 
 /// Displays an event on a row
@@ -42,9 +40,8 @@ class LinkTile extends StatelessWidget {
         child: Column(children: [
       new Container(
           child: Center(
-              child: GetImage(imagePath: linkModel.photo)
-    )
-      ),
+              child: Image.network(linkModel.photo,
+                  width: MediaQuery.of(context).size.width * .8))),
       new Container(
           padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
           child: Center(
@@ -68,31 +65,4 @@ class LinkTile extends StatelessWidget {
               child: Text(linkModel.description)))
     ]));
   }
-}
-
-class GetImage extends StatelessWidget {
-  final firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
-
-  final String imagePath;
-
-  GetImage({
-    Key key,
-    this.imagePath
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<String>(
-        future: storage.ref(imagePath).getDownloadURL(),
-        builder: (context, AsyncSnapshot<String> snapshot) {
-          if (snapshot.hasData) {
-            return Image.network(snapshot.data, width: MediaQuery.of(context).size.width * .8);
-          } else {
-            return Image.asset(Constants.imgDefaultEvent, width: MediaQuery.of(context).size.width * .8);
-          }
-        }
-    );
-  }
-
 }

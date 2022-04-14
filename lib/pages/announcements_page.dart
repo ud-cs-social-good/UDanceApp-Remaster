@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/side_menu.dart';
 import '../constants.dart';
+import '../models/sample_announcements.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/announcement_model.dart';
 import '../pages/announcement_page.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class AnnouncementsPage extends StatefulWidget {
   @override
@@ -13,6 +13,17 @@ class AnnouncementsPage extends StatefulWidget {
 }
 
 class _AnnouncementsPageState extends State<AnnouncementsPage> {
+  List<SampleAnnouncements> announces = [
+    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
+    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
+    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
+    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
+    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in the Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
+    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
+    SampleAnnouncements(title: 'Canning on Main.St! Sign ups needed.',flag: 'mainst.jpg', location: 'Main St.', text: 'Please sign up for a slot on the google form (under resources) to volunteer for canning on Main St.! We need more volunteers for the next two months. FTK! '),
+    SampleAnnouncements(title: 'UDance Directors Meeting!', flag: 'trabant.jpg', location: 'Trabant University Center', text: 'Attention UDance directors! We will be having a meeting in the Trabant Multipurpose Room next Thursday. Be sure to bring ideas for fundraising. '),
+    SampleAnnouncements(title: 'Volunteer Meeting!', flag: 'gore.jpg', location: 'Gore Hall', text: 'Attention all UDance volunteers! We will be having a volunteer meeting in Gore Hall Room 105 next Wednesday! We will have a short meeting from 6 - 6:30.'),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,9 +84,6 @@ class _AnnouncementsPageState extends State<AnnouncementsPage> {
 }
 
 class CircleImage extends StatelessWidget {
-  final firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
-
   CircleImage({
     Key key,
     this.imagePath,
@@ -85,23 +93,12 @@ class CircleImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<String>(
-        future: storage.ref(imagePath).getDownloadURL(),
-        builder: (context, AsyncSnapshot<String> snapshot) {
-          if (snapshot.hasData) {
-            return CircleAvatar(
-              backgroundImage: NetworkImage(snapshot.data),
-              radius: 40,
-            );
-          } else {
-            return CircleAvatar(
-              backgroundImage: AssetImage(Constants.imgDefaultEvent),
-              radius: 40,
-            );
-          }
-        }
+    Widget image = CircleAvatar(
+      backgroundImage: NetworkImage(imagePath),
+      radius: 40,
     );
-  }
 
+    return image;
+  }
 }
 

@@ -1,13 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'list_item_model.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class EventModel extends ListItemModel {
-
-  final firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
-
   EventModel({
     this.title = "",
     this.description = "",
@@ -138,5 +133,4 @@ class EventModel extends ListItemModel {
       return "";
     }
   }
-
 }

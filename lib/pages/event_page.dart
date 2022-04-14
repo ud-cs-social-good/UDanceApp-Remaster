@@ -2,15 +2,10 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-import 'dart:developer';
-
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 import '../constants.dart';
 import '../helpers/helpers.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-
-
 
 /// Page displaying an event.
 class EventPage extends StatelessWidget {
@@ -162,12 +157,8 @@ class EventPage extends StatelessWidget {
   }
 }
 
-//gets images from Cloud Storage
 class TopImage extends StatelessWidget {
-  final firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
-
-  TopImage({
+  const TopImage({
     Key key,
     this.imagePath,
   }) : super(key: key);
@@ -176,46 +167,31 @@ class TopImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<String>(
-      future: storage.ref(imagePath).getDownloadURL(),
-      builder: (context, AsyncSnapshot<String> snapshot) {
-        if (snapshot.hasData) {
-          return GestureDetector(
-            child: getImage(snapshot.data),
-            onTap: () {
-              showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      content: getImage(snapshot.data),
-                      contentPadding: EdgeInsets.zero,
-                      scrollable: true,
-                    );
-                  });
-            },
-          );
-        } else {
-          log(snapshot.toString());
-          return Image.asset(Constants.imgDefaultEvent);
-        }
-      }
-    );
-  }
-
-
-  Image getImage(imagePath) {
-    return Image.network(imagePath,
+    Widget image =
+    Image.network(imagePath,
       fit: BoxFit.cover,
       errorBuilder:
           (BuildContext context, Object exception, StackTrace stackTrace) {
         return Image.asset(Constants.imgDefaultEvent);
       },
     );
+
+    return GestureDetector(
+      child: image,
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                content: image,
+                contentPadding: EdgeInsets.zero,
+                scrollable: true,
+              );
+            });
+      },
+    );
   }
-
-
-  }
-
+}
 
 /// Displays the description of the event with the [flutter_markdown] package.
 class _EventDescription extends StatelessWidget {

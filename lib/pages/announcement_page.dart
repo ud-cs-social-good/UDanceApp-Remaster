@@ -6,9 +6,6 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 import '../constants.dart';
 import '../helpers/helpers.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 /// Page displaying an event.
 class AnnouncementPage extends StatelessWidget {
@@ -72,25 +69,13 @@ class AnnouncementPage extends StatelessWidget {
                     title: announcementModel.title,
                     description: announcementModel.description,
                   ),
-                  if (announcementModel.address != "") ...[
+                  if (announcementModel.location != "") ...[
                     Divider(),
                     ListTile(
                       leading: Icon(Icons.pin_drop),
-                      title: Text(announcementModel.address,
+                      title: Text(announcementModel.location,
                           style: Theme.of(context).textTheme.bodyText2),
-                        onTap: () {
-                            showModalBottomSheet(
-                            context: context,
-                            builder: (context) =>
-                            CustomBottomSheet(announcementModel, [
-                            RowButtonModel(
-                            text: Constants.openInGoogleMaps,
-                            url: announcementModel.addressLink,
-                            eventTitle: announcementModel.title),
-                            RowButtonModel(
-                            text: Constants.copy, shouldCopy: true),
-                            ]));
-                            },
+
                     ),
                     Divider(),
                   ]
@@ -131,10 +116,7 @@ class AnnouncementPage extends StatelessWidget {
 }
 
 class TopImage extends StatelessWidget {
-  final firebase_storage.FirebaseStorage storage =
-      firebase_storage.FirebaseStorage.instance;
-
-  TopImage({
+  const TopImage({
     Key key,
     this.imagePath,
   }) : super(key: key);
@@ -143,15 +125,28 @@ class TopImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<String>(
-        future: storage.ref(imagePath).getDownloadURL(),
-        builder: (context, AsyncSnapshot<String> snapshot) {
-          if (snapshot.hasData) {
-            return Image.network(snapshot.data, fit: BoxFit.cover);
-          } else {
-            return Image.asset(Constants.imgDefaultEvent);
-          }
-        }
+    Widget image =
+    Image.network(imagePath,
+      fit: BoxFit.cover,
+      errorBuilder:
+          (BuildContext context, Object exception, StackTrace stackTrace) {
+        return Image.asset(Constants.imgDefaultEvent);
+      },
+    );
+
+    return GestureDetector(
+      child: image,
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                content: image,
+                contentPadding: EdgeInsets.zero,
+                scrollable: true,
+              );
+            });
+      },
     );
   }
 }

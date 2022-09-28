@@ -1,0 +1,1 @@
+../../../Target Support Files/firebase_core/firebase_core-umbrella.h

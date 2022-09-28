@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/laurenbaron/UDanceApp-Remaster/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml",
+            "map": [
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/fe8b89d21d85b0e7347f8653a541979c/play-services-base-18.0.1/res/values-bn/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,298,453,577,684,816,934,1042,1142,1281,1386,1538,1662,1791,1935,1991,2054",
+                        "endColumns": "104,154,123,106,131,117,107,99,138,104,151,123,128,143,55,62,85",
+                        "endOffsets": "297,452,576,683,815,933,1041,1141,1280,1385,1537,1661,1790,1934,1990,2053,2139"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,164,323,451,562,698,820,932,1188,1331,1440,1596,1724,1857,2005,2065,2132",
+                        "endColumns": "108,158,127,110,135,121,111,103,142,108,155,127,132,147,59,66,89",
+                        "endOffsets": "159,318,446,557,693,815,927,1031,1326,1435,1591,1719,1852,2000,2060,2127,2217"
+                    }
+                },
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/225d653350b8bd96e5edaf1a174ce3be/exoplayer-core-2.18.1/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,189,256,322,397,464,596,725",
+                        "endColumns": "67,65,66,65,74,66,131,128,88",
+                        "endOffsets": "118,184,251,317,392,459,591,720,809"
+                    },
+                    "to": {
+                        "startLines": "20,21,22,23,24,25,26,27,28",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2222,2290,2356,2423,2489,2564,2631,2763,2892",
+                        "endColumns": "67,65,66,65,74,66,131,128,88",
+                        "endOffsets": "2285,2351,2418,2484,2559,2626,2758,2887,2976"
+                    }
+                },
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/0c75332b9029e89a3c6eaddfbe9c3c41/core-1.7.0/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "2981",
+                        "endColumns": "100",
+                        "endOffsets": "3077"
+                    }
+                },
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/8cd839a51d61b7a96727da1858919674/jetified-play-services-basement-18.1.0/res/values-bn/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "147",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1036",
+                        "endColumns": "151",
+                        "endOffsets": "1183"
+                    }
+                }
+            ]
+        }
+    ]
+}

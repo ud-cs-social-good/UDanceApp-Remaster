@@ -55,8 +55,8 @@ class _HomePage1State extends State<HomePage1> {
                   child: FittedBox(
                       fit: BoxFit.cover,
                       child: SizedBox(
-                          width: _videoController!.value.size?.width ?? 0,
-                          height: _videoController!.value.size?.height ?? 0,
+                          width: _videoController!.value.size.width, //took out ?. after size and ?? 0 after width
+                          height: _videoController!.value.size.height,
                           child: VideoPlayer(_videoController!))),
                 ),
                 ProminentAppBar(),

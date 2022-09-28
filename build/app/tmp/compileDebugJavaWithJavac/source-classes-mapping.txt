@@ -1,0 +1,318 @@
+io/grpc/android/R.java
+ io.grpc.android.R
+com/google/android/exoplayer2/upstream/R.java
+ com.google.android.exoplayer2.upstream.R
+io/flutter/plugins/pathprovider/R.java
+ io.flutter.plugins.pathprovider.R
+ io.flutter.plugins.pathprovider.R$attr
+ io.flutter.plugins.pathprovider.R$color
+ io.flutter.plugins.pathprovider.R$dimen
+ io.flutter.plugins.pathprovider.R$drawable
+ io.flutter.plugins.pathprovider.R$id
+ io.flutter.plugins.pathprovider.R$integer
+ io.flutter.plugins.pathprovider.R$layout
+ io.flutter.plugins.pathprovider.R$string
+ io.flutter.plugins.pathprovider.R$style
+ io.flutter.plugins.pathprovider.R$styleable
+com/google/android/exoplayer2/source/smoothstreaming/R.java
+ com.google.android.exoplayer2.source.smoothstreaming.R
+ com.google.android.exoplayer2.source.smoothstreaming.R$attr
+ com.google.android.exoplayer2.source.smoothstreaming.R$color
+ com.google.android.exoplayer2.source.smoothstreaming.R$dimen
+ com.google.android.exoplayer2.source.smoothstreaming.R$drawable
+ com.google.android.exoplayer2.source.smoothstreaming.R$id
+ com.google.android.exoplayer2.source.smoothstreaming.R$integer
+ com.google.android.exoplayer2.source.smoothstreaming.R$layout
+ com.google.android.exoplayer2.source.smoothstreaming.R$menu
+ com.google.android.exoplayer2.source.smoothstreaming.R$string
+ com.google.android.exoplayer2.source.smoothstreaming.R$style
+ com.google.android.exoplayer2.source.smoothstreaming.R$styleable
+androidx/lifecycle/livedata/core/R.java
+ androidx.lifecycle.livedata.core.R
+com/google/android/exoplayer2/extractor/R.java
+ com.google.android.exoplayer2.extractor.R
+com/google/android/exoplayer2/core/R.java
+ com.google.android.exoplayer2.core.R
+ com.google.android.exoplayer2.core.R$attr
+ com.google.android.exoplayer2.core.R$color
+ com.google.android.exoplayer2.core.R$dimen
+ com.google.android.exoplayer2.core.R$drawable
+ com.google.android.exoplayer2.core.R$id
+ com.google.android.exoplayer2.core.R$integer
+ com.google.android.exoplayer2.core.R$layout
+ com.google.android.exoplayer2.core.R$menu
+ com.google.android.exoplayer2.core.R$string
+ com.google.android.exoplayer2.core.R$style
+ com.google.android.exoplayer2.core.R$styleable
+androidx/lifecycle/livedata/R.java
+ androidx.lifecycle.livedata.R
+firebase/com/protolitewrapper/R.java
+ firebase.com.protolitewrapper.R
+androidx/arch/core/R.java
+ androidx.arch.core.R
+androidx/fragment/R.java
+ androidx.fragment.R
+ androidx.fragment.R$attr
+ androidx.fragment.R$color
+ androidx.fragment.R$dimen
+ androidx.fragment.R$drawable
+ androidx.fragment.R$id
+ androidx.fragment.R$integer
+ androidx.fragment.R$layout
+ androidx.fragment.R$string
+ androidx.fragment.R$style
+ androidx.fragment.R$styleable
+com/google/firebase/database/collection/R.java
+ com.google.firebase.database.collection.R
+ com.google.firebase.database.collection.R$attr
+ com.google.firebase.database.collection.R$color
+ com.google.firebase.database.collection.R$dimen
+ com.google.firebase.database.collection.R$drawable
+ com.google.firebase.database.collection.R$id
+ com.google.firebase.database.collection.R$integer
+ com.google.firebase.database.collection.R$layout
+ com.google.firebase.database.collection.R$string
+ com.google.firebase.database.collection.R$style
+ com.google.firebase.database.collection.R$styleable
+androidx/savedstate/R.java
+ androidx.savedstate.R
+io/flutter/plugins/firebase/firestore/R.java
+ io.flutter.plugins.firebase.firestore.R
+ io.flutter.plugins.firebase.firestore.R$attr
+ io.flutter.plugins.firebase.firestore.R$color
+ io.flutter.plugins.firebase.firestore.R$dimen
+ io.flutter.plugins.firebase.firestore.R$drawable
+ io.flutter.plugins.firebase.firestore.R$id
+ io.flutter.plugins.firebase.firestore.R$integer
+ io.flutter.plugins.firebase.firestore.R$layout
+ io.flutter.plugins.firebase.firestore.R$raw
+ io.flutter.plugins.firebase.firestore.R$string
+ io.flutter.plugins.firebase.firestore.R$style
+ io.flutter.plugins.firebase.firestore.R$styleable
+androidx/customview/R.java
+ androidx.customview.R
+ androidx.customview.R$attr
+ androidx.customview.R$color
+ androidx.customview.R$dimen
+ androidx.customview.R$drawable
+ androidx.customview.R$id
+ androidx.customview.R$integer
+ androidx.customview.R$layout
+ androidx.customview.R$string
+ androidx.customview.R$style
+ androidx.customview.R$styleable
+com/example/udance2022/BuildConfig.java
+ com.example.udance2022.BuildConfig
+androidx/window/java/R.java
+ androidx.window.java.R
+com/google/firebase/firestore/R.java
+ com.google.firebase.firestore.R
+ com.google.firebase.firestore.R$attr
+ com.google.firebase.firestore.R$color
+ com.google.firebase.firestore.R$dimen
+ com.google.firebase.firestore.R$drawable
+ com.google.firebase.firestore.R$id
+ com.google.firebase.firestore.R$integer
+ com.google.firebase.firestore.R$layout
+ com.google.firebase.firestore.R$raw
+ com.google.firebase.firestore.R$string
+ com.google.firebase.firestore.R$style
+ com.google.firebase.firestore.R$styleable
+androidx/loader/R.java
+ androidx.loader.R
+ androidx.loader.R$attr
+ androidx.loader.R$color
+ androidx.loader.R$dimen
+ androidx.loader.R$drawable
+ androidx.loader.R$id
+ androidx.loader.R$integer
+ androidx.loader.R$layout
+ androidx.loader.R$string
+ androidx.loader.R$style
+ androidx.loader.R$styleable
+com/google/firebase/R.java
+ com.google.firebase.R
+ com.google.firebase.R$attr
+ com.google.firebase.R$color
+ com.google.firebase.R$dimen
+ com.google.firebase.R$drawable
+ com.google.firebase.R$id
+ com.google.firebase.R$integer
+ com.google.firebase.R$layout
+ com.google.firebase.R$raw
+ com.google.firebase.R$string
+ com.google.firebase.R$style
+ com.google.firebase.R$styleable
+androidx/annotation/experimental/R.java
+ androidx.annotation.experimental.R
+com/google/firebase/appcheck/interop/R.java
+ com.google.firebase.appcheck.interop.R
+ com.google.firebase.appcheck.interop.R$attr
+ com.google.firebase.appcheck.interop.R$color
+ com.google.firebase.appcheck.interop.R$dimen
+ com.google.firebase.appcheck.interop.R$drawable
+ com.google.firebase.appcheck.interop.R$id
+ com.google.firebase.appcheck.interop.R$integer
+ com.google.firebase.appcheck.interop.R$layout
+ com.google.firebase.appcheck.interop.R$raw
+ com.google.firebase.appcheck.interop.R$string
+ com.google.firebase.appcheck.interop.R$style
+ com.google.firebase.appcheck.interop.R$styleable
+com/google/firebase/components/R.java
+ com.google.firebase.components.R
+com/google/android/exoplayer2/source/hls/R.java
+ com.google.android.exoplayer2.source.hls.R
+ com.google.android.exoplayer2.source.hls.R$attr
+ com.google.android.exoplayer2.source.hls.R$color
+ com.google.android.exoplayer2.source.hls.R$dimen
+ com.google.android.exoplayer2.source.hls.R$drawable
+ com.google.android.exoplayer2.source.hls.R$id
+ com.google.android.exoplayer2.source.hls.R$integer
+ com.google.android.exoplayer2.source.hls.R$layout
+ com.google.android.exoplayer2.source.hls.R$menu
+ com.google.android.exoplayer2.source.hls.R$string
+ com.google.android.exoplayer2.source.hls.R$style
+ com.google.android.exoplayer2.source.hls.R$styleable
+androidx/lifecycle/runtime/R.java
+ androidx.lifecycle.runtime.R
+ androidx.lifecycle.runtime.R$id
+androidx/core/R.java
+ androidx.core.R
+ androidx.core.R$attr
+ androidx.core.R$color
+ androidx.core.R$dimen
+ androidx.core.R$drawable
+ androidx.core.R$id
+ androidx.core.R$integer
+ androidx.core.R$layout
+ androidx.core.R$menu
+ androidx.core.R$string
+ androidx.core.R$style
+ androidx.core.R$styleable
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+androidx/tracing/R.java
+ androidx.tracing.R
+io/flutter/plugins/urllauncher/R.java
+ io.flutter.plugins.urllauncher.R
+ io.flutter.plugins.urllauncher.R$attr
+ io.flutter.plugins.urllauncher.R$color
+ io.flutter.plugins.urllauncher.R$dimen
+ io.flutter.plugins.urllauncher.R$drawable
+ io.flutter.plugins.urllauncher.R$id
+ io.flutter.plugins.urllauncher.R$integer
+ io.flutter.plugins.urllauncher.R$layout
+ io.flutter.plugins.urllauncher.R$string
+ io.flutter.plugins.urllauncher.R$style
+ io.flutter.plugins.urllauncher.R$styleable
+com/google/android/gms/common/R.java
+ com.google.android.gms.common.R
+ com.google.android.gms.common.R$integer
+ com.google.android.gms.common.R$string
+androidx/window/R.java
+ androidx.window.R
+ androidx.window.R$attr
+ androidx.window.R$id
+ androidx.window.R$styleable
+androidx/activity/R.java
+ androidx.activity.R
+ androidx.activity.R$attr
+ androidx.activity.R$color
+ androidx.activity.R$dimen
+ androidx.activity.R$drawable
+ androidx.activity.R$id
+ androidx.activity.R$integer
+ androidx.activity.R$layout
+ androidx.activity.R$string
+ androidx.activity.R$style
+ androidx.activity.R$styleable
+io/flutter/plugins/videoplayer/R.java
+ io.flutter.plugins.videoplayer.R
+ io.flutter.plugins.videoplayer.R$attr
+ io.flutter.plugins.videoplayer.R$color
+ io.flutter.plugins.videoplayer.R$dimen
+ io.flutter.plugins.videoplayer.R$drawable
+ io.flutter.plugins.videoplayer.R$id
+ io.flutter.plugins.videoplayer.R$integer
+ io.flutter.plugins.videoplayer.R$layout
+ io.flutter.plugins.videoplayer.R$menu
+ io.flutter.plugins.videoplayer.R$string
+ io.flutter.plugins.videoplayer.R$style
+ io.flutter.plugins.videoplayer.R$styleable
+com/google/android/exoplayer2/source/dash/R.java
+ com.google.android.exoplayer2.source.dash.R
+ com.google.android.exoplayer2.source.dash.R$attr
+ com.google.android.exoplayer2.source.dash.R$color
+ com.google.android.exoplayer2.source.dash.R$dimen
+ com.google.android.exoplayer2.source.dash.R$drawable
+ com.google.android.exoplayer2.source.dash.R$id
+ com.google.android.exoplayer2.source.dash.R$integer
+ com.google.android.exoplayer2.source.dash.R$layout
+ com.google.android.exoplayer2.source.dash.R$menu
+ com.google.android.exoplayer2.source.dash.R$string
+ com.google.android.exoplayer2.source.dash.R$style
+ com.google.android.exoplayer2.source.dash.R$styleable
+com/google/android/gms/base/R.java
+ com.google.android.gms.base.R
+ com.google.android.gms.base.R$attr
+ com.google.android.gms.base.R$color
+ com.google.android.gms.base.R$drawable
+ com.google.android.gms.base.R$id
+ com.google.android.gms.base.R$string
+ com.google.android.gms.base.R$styleable
+com/google/android/exoplayer2/decoder/R.java
+ com.google.android.exoplayer2.decoder.R
+androidx/versionedparcelable/R.java
+ androidx.versionedparcelable.R
+androidx/viewpager/R.java
+ androidx.viewpager.R
+ androidx.viewpager.R$attr
+ androidx.viewpager.R$color
+ androidx.viewpager.R$dimen
+ androidx.viewpager.R$drawable
+ androidx.viewpager.R$id
+ androidx.viewpager.R$integer
+ androidx.viewpager.R$layout
+ androidx.viewpager.R$string
+ androidx.viewpager.R$style
+ androidx.viewpager.R$styleable
+io/flutter/plugins/firebase/core/R.java
+ io.flutter.plugins.firebase.core.R
+ io.flutter.plugins.firebase.core.R$attr
+ io.flutter.plugins.firebase.core.R$color
+ io.flutter.plugins.firebase.core.R$dimen
+ io.flutter.plugins.firebase.core.R$drawable
+ io.flutter.plugins.firebase.core.R$id
+ io.flutter.plugins.firebase.core.R$integer
+ io.flutter.plugins.firebase.core.R$layout
+ io.flutter.plugins.firebase.core.R$raw
+ io.flutter.plugins.firebase.core.R$string
+ io.flutter.plugins.firebase.core.R$style
+ io.flutter.plugins.firebase.core.R$styleable
+com/example/udance2022/R.java
+ com.example.udance2022.R
+ com.example.udance2022.R$attr
+ com.example.udance2022.R$color
+ com.example.udance2022.R$dimen
+ com.example.udance2022.R$drawable
+ com.example.udance2022.R$id
+ com.example.udance2022.R$integer
+ com.example.udance2022.R$layout
+ com.example.udance2022.R$menu
+ com.example.udance2022.R$mipmap
+ com.example.udance2022.R$raw
+ com.example.udance2022.R$string
+ com.example.udance2022.R$style
+ com.example.udance2022.R$styleable
+com/google/android/exoplayer2/common/R.java
+ com.google.android.exoplayer2.common.R
+com/google/android/gms/tasks/R.java
+ com.google.android.gms.tasks.R
+com/google/firebase/auth/internal/R.java
+ com.google.firebase.auth.internal.R
+com/google/android/exoplayer2/database/R.java
+ com.google.android.exoplayer2.database.R
+androidx/lifecycle/viewmodel/R.java
+ androidx.lifecycle.viewmodel.R
+androidx/multidex/R.java
+ androidx.multidex.R

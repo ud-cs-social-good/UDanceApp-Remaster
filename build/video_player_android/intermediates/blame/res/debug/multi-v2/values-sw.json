@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/laurenbaron/UDanceApp-Remaster/build/video_player_android/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml",
+            "map": [
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/225d653350b8bd96e5edaf1a174ce3be/exoplayer-core-2.18.1/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,177,239,306,384,465,552,634",
+                        "endColumns": "62,58,61,66,77,80,86,81,69",
+                        "endOffsets": "113,172,234,301,379,460,547,629,699"
+                    }
+                },
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/0c75332b9029e89a3c6eaddfbe9c3c41/core-1.7.0/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "704",
+                        "endColumns": "100",
+                        "endOffsets": "800"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/laurenbaron/UDanceApp-Remaster/build/video_player_android/intermediates/res/merged/debug/values-sw/values-sw.xml",
+            "map": [
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/225d653350b8bd96e5edaf1a174ce3be/exoplayer-core-2.18.1/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,177,239,306,384,465,552,634",
+                        "endColumns": "62,58,61,66,77,80,86,81,69",
+                        "endOffsets": "113,172,234,301,379,460,547,629,699"
+                    }
+                },
+                {
+                    "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/0c75332b9029e89a3c6eaddfbe9c3c41/core-1.7.0/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "704",
+                        "endColumns": "100",
+                        "endOffsets": "800"
+                    }
+                }
+            ]
+        }
+    ]
+}

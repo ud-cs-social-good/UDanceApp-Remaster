@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/laurenbaron/UDanceApp-Remaster/build/url_launcher_android/intermediates/res/merged/debug/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/82a853f7e25f9b7a9932cadf005b8916/core-1.6.0/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/laurenbaron/UDanceApp-Remaster/build/url_launcher_android/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/82a853f7e25f9b7a9932cadf005b8916/core-1.6.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/laurenbaron/UDanceApp-Remaster/build/url_launcher_android/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/82a853f7e25f9b7a9932cadf005b8916/core-1.6.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/laurenbaron/UDanceApp-Remaster/build/url_launcher_android/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/82a853f7e25f9b7a9932cadf005b8916/core-1.6.0/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/laurenbaron/UDanceApp-Remaster/build/url_launcher_android/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/laurenbaron/.gradle/caches/transforms-2/files-2.1/82a853f7e25f9b7a9932cadf005b8916/core-1.6.0/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    }
+]

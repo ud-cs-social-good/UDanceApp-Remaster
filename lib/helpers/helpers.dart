@@ -73,7 +73,7 @@ class Helpers {
         if (title != null) {
           errorMessage += ", event: $title";
         }
-        Scaffold.of(context).showSnackBar((SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar((SnackBar(
           content: Text(Constants.invalidURLMessage),
           duration: Duration(seconds: 3),
         )));

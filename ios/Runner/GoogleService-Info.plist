@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>306614162605-pbtmalph0rug2pk16k924ot024rghguh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.306614162605-pbtmalph0rug2pk16k924ot024rghguh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDbWr7p3hCvSGwq_Vno9CEqj78K13sv9DM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>306614162605</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cssg.udance2022</string>
+	<key>PROJECT_ID</key>
+	<string>udance-2022</string>
+	<key>STORAGE_BUCKET</key>
+	<string>udance-2022.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:306614162605:ios:6447fc0a827bb6b502a224</string>
+</dict>
+</plist>
